@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     public float actionTimer;
-    public GameObject blockArms;
+    public GameObject blockLeftArm;
+    public GameObject blockRightArm;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,15 +32,31 @@ public class EnemyCombat : MonoBehaviour
         int choice = Random.Range(0, 5); // Picks a random number from 0 to 4
         if(choice == 0) // Block if the random number landed on 0
         {
-            blockArms.SetActive(true);
+            blockLeftArm.SetActive(true);
+            blockRightArm.SetActive(true);
+            Invoke("ResetMoves", 1);
         }
-        if(choice == 1) // Attacks if the number landed on 1
+        if(choice == 1) // Punch with any hand
         {
-            //Attack
+            //Punch
         }
         if(choice == 2)
         {
             //Step back
         }
+        if (choice == 3) // Roundhouse kick with back leg
+        {
+            //Roundhouse kick
+        }
+        if (choice == 4) // Back kick
+        {
+            //Back kick
+        }
+
+    }
+    void ResetMoves()
+    {
+        blockLeftArm.SetActive(false);
+        blockRightArm.SetActive(false);
     }
 }

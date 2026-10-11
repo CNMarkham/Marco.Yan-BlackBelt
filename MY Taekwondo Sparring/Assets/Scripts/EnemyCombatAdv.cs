@@ -32,30 +32,46 @@ public class EnemyCombatAdv : MonoBehaviour
         actionTimer = 5; // Reset action timer back to 5
         if(Vector3.Distance(player.transform.position, transform.position) < 5 ) // Opponent has more options the closer the target
         {
-            int choice = Random.Range(0, 5); // Picks a random number from 0 to 4
+            int choice = Random.Range(0, 6); // Picks a random number from 0 to 5
             if (choice == 0) // Block if the random number landed on 0
             {
                 blockArms.SetActive(true);
             }
             if (choice == 1) // Attacks if the number landed on 1
             {
-                //Attack
+                //Punch
             }
             if (choice == 2)
             {
-                //Step back
+                //Slide back
+            }
+            if (choice == 3)
+            {
+                //Reverse hook kick
+            }
+            if (choice == 4)
+            {
+                //Back kick
+            }
+            if (choice == 5)
+            {
+                //Fading Roundhouse kick
             }
         }
         else if(Vector3.Distance(player.transform.position, transform.position) > 5) // fewer options the further target is
         {
-            int choice = Random.Range(0, 2); // Picks a random number from 0 to 4
+            int choice = Random.Range(0, 3); // Picks a random number from 0 to 2
             if (choice == 0) 
             {
                 //Step forward
             }
             if (choice == 1) 
             {
-                //Long distance strike
+                //Slide roundhouse kick forward
+            }
+            if (choice == 2)
+            {
+                //Cut kick
             }
 
 

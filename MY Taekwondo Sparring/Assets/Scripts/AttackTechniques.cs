@@ -31,6 +31,10 @@ public class AttackTechniques : MonoBehaviour
         {
 
         }
+        if (Input.GetKeyDown(KeyCode.F)) // Pressed F
+        {
+            //Punch with back hand
+        }
 
         if (Input.GetMouseButtonDown(0)) // Left click
         {

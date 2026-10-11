@@ -15,6 +15,14 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q)) // Pressed Q
+        {
+            //Dash in current moving direction
+        }
+        if (Input.GetKeyDown(KeyCode.R)) // Pressed R
+        {
+            //Switch stances
+        }
         transform.LookAt(new Vector3(opponent.transform.position.x, transform.position.y, opponent.transform.position.z));
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
