@@ -25,5 +25,6 @@ public class RefereeCalls : MonoBehaviour
         //When round starts, also start round timer
         //When round ends, start rest timer
         //When rest timer ends, bring back fighters to competition area and start round timer
+        //If player loses, set RestartUI.SetActive(true);
     }
 }
