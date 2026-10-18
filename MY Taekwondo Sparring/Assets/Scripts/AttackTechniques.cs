@@ -6,10 +6,12 @@ public class AttackTechniques : MonoBehaviour
 {
     public GameObject LeftRoundhouse;
     public GameObject RightRoundhouse;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -17,7 +19,7 @@ public class AttackTechniques : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1)) // Pressed 1
         {
-
+            anim.SetTrigger("hit");
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)) // Pressed 2
         {
@@ -34,15 +36,18 @@ public class AttackTechniques : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)) // Pressed F
         {
             //Punch with back hand
+            anim.SetTrigger("LJab");
         }
 
         if (Input.GetMouseButtonDown(0)) // Left click
         {
+            anim.SetTrigger("LKick");
             LeftRoundhouse.SetActive(true);
             Invoke("ResetAttacks", 1);
         }
         if (Input.GetMouseButtonDown(1)) // Right click
         {
+            anim.SetTrigger("RKick");
             RightRoundhouse.SetActive(true);
             Invoke("ResetAttacks", 1);
         }
