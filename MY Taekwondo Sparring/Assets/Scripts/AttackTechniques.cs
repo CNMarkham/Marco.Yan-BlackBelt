@@ -23,20 +23,22 @@ public class AttackTechniques : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)) // Pressed 2
         {
-
+            anim.SetTrigger("LJab");
         }
         if (Input.GetKeyDown(KeyCode.Alpha3)) // Pressed 3
         {
-
+            //Back kick with back leg
+            anim.SetTrigger("RBack");
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)) // Pressed 4
         {
-
+            //flying side kick
+            anim.SetTrigger("LFlyKick");
         }
         if (Input.GetKeyDown(KeyCode.F)) // Pressed F
         {
             //Punch with back hand
-            anim.SetTrigger("LJab");
+            //anim.SetTrigger("LJab");
         }
 
         if (Input.GetMouseButtonDown(0)) // Left click
