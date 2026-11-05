@@ -37,21 +37,21 @@ public class AttackTechniques : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F)) // Pressed F
         {
-            //Punch with back hand
-            //anim.SetTrigger("LJab");
+            //Block
+            anim.SetTrigger("LBlock");
         }
 
         if (Input.GetMouseButtonDown(0)) // Left click
         {
             anim.SetTrigger("LKick");
-            LeftRoundhouse.SetActive(true);
-            Invoke("ResetAttacks", 1);
+            //LeftRoundhouse.SetActive(true);
+            //Invoke("ResetAttacks", 1);
         }
         if (Input.GetMouseButtonDown(1)) // Right click
         {
             anim.SetTrigger("RKick");
-            RightRoundhouse.SetActive(true);
-            Invoke("ResetAttacks", 1);
+            //RightRoundhouse.SetActive(true);
+            //Invoke("ResetAttacks", 1);
         }
     }
     void ResetAttacks()

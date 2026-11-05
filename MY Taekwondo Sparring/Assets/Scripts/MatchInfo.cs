@@ -18,3 +18,5 @@ public class MatchInfo : MonoBehaviour
         //If player wins against the final opponent, play tournament victory cutscene
     }
 }
+
+//Invoke = calling a function after a specific amount of time
