@@ -9,6 +9,7 @@ public class EnemyCombat : MonoBehaviour
     public GameObject blockRightArm;
     public GameObject Punch;
     public GameObject RightRoundhouse;
+    public GameObject LeftRoundhouse;
     public GameObject BackKick;
     // Start is called before the first frame update
     void Start()
@@ -50,8 +51,7 @@ public class EnemyCombat : MonoBehaviour
         }
         if (choice == 3) // Roundhouse kick with back leg
         {
-            RightRoundhouse.SetActive(true);
-            Invoke("ResetMoves", 1);
+            RoundHouse();
         }
         if (choice == 4) // Back kick
         {
@@ -60,12 +60,27 @@ public class EnemyCombat : MonoBehaviour
         }
 
     }
+    void RoundHouse()
+    {
+        int choice = Random.Range(0, 1);
+        if (choice == 0)
+        {
+            RightRoundhouse.SetActive(true);
+            Invoke("ResetMoves", 1);
+        }
+        if (choice == 1)
+        {
+            LeftRoundhouse.SetActive(true);
+            Invoke("ResetMoves", 1);
+        }
+    }
     void ResetMoves()
     {
         blockLeftArm.SetActive(false);
         blockRightArm.SetActive(false);
         Punch.SetActive(false);
         RightRoundhouse.SetActive(false);
+        LeftRoundhouse.SetActive(false);
         BackKick.SetActive(false);
     }
 }

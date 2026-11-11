@@ -20,3 +20,4 @@ public class MatchInfo : MonoBehaviour
 }
 
 //Invoke = calling a function after a specific amount of time
+//Coroutine = delaying things at specific points in a function
